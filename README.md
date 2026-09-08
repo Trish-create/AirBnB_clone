@@ -1,1 +1,3 @@
 # AirBnB_clone
+
+This is a AirBnB clone project where I will build a whloe application from scratch. The first thing is the command interpreter The command interpreter is a Python program that allows users to manage AirBnB objects through a command-line interface. To start it, open the project terminal and run `./console.py`, which displays the `(hbnb)` prompt. Users can then type commands to interact with the application, such as `help` to view available commands, `create` to create an object, `show` to display an object, `all` to display all objects, and `destroy` to delete an object. For example, `create BaseModel` creates a new object, while `show BaseModel <id>` displays it. The `quit` command exits the interpreter.
