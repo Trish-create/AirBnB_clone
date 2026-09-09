@@ -1,25 +1,21 @@
 #!/usr/bin/python3
+"""Tests for BaseModel."""
+
+import unittest
 from models.base_model import BaseModel
 
-my_model = BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
 
-print(my_model)
+class TestBaseModel(unittest.TestCase):
+    """Test the BaseModel class."""
 
-my_model.save()
+    def test_create_instance(self):
+        """Test creating a BaseModel."""
+        model = BaseModel()
+        self.assertIsInstance(model, BaseModel)
+        self.assertIsNotNone(model.id)
+        self.assertIsNotNone(model.created_at)
+        self.assertIsNotNone(model.updated_at)
 
-print(my_model)
 
-my_model_json = my_model.to_dict()
-
-print(my_model_json)
-
-print("JSON of my_model:")
-
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(
-        key,
-        type(my_model_json[key]),
-        my_model_json[key]
-    ))
+if __name__ == "__main__":
+    unittest.main()

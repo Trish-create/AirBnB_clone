@@ -3,8 +3,8 @@
 
 import uuid
 from datetime import datetime
-
 from models import storage
+
 
 class BaseModel:
     """Defines the base model for all AirBnB objects."""

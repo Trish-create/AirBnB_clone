@@ -42,4 +42,3 @@ class FileStorage:
 
         except FileNotFoundError:
             pass
-
