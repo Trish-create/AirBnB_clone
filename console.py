@@ -42,7 +42,7 @@ class HBNBCommand(cmd.Cmd):
     def do_create(self, arg):
         """here we are creating a new instance of a class"""
         if not arg:
-            print("**class name missing**")
+            print("** class name missing **")
             return
         
         args = arg.split()
@@ -87,13 +87,13 @@ class HBNBCommand(cmd.Cmd):
 
         print(objects[key])
 
-    def destroy(self,arg):
+    def do_destroy(self,arg):
         """deletes an instance based on the class name"""
         if not arg:
-            print("**class name missing**")
+            print("** class name missing **")
             return
 
-        args = arg.spilt()
+        args = arg.split()
 
         class_name = args[0]
 
@@ -125,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
             args = arg.split()
             class_name = args[0]
 
-            if class_name not in self.clasess:
+            if class_name not in self.classes:
                 print("** class doesn't exist **")
                 return
 
